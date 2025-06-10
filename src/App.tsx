@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { LMSProvider } from './contexts/LMSContext';
 import Navbar from './components/Navbar';
@@ -10,6 +9,8 @@ import SignupPage from './pages/SignupPage';
 import Dashboard from './pages/Dashboard';
 import VideoPlayer from './pages/VideoPlayer';
 import PurchasePage from './pages/PurchasePage';
+import PaymentSuccess from './pages/PaymentSuccess';
+import PaymentCancel from './pages/PaymentCancel';
 import AdminPanel from './pages/AdminPanel';
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/video/:videoId" element={<VideoPlayer />} />
               <Route path="/purchase" element={<PurchasePage />} />
+              <Route path="/payment/success" element={<PaymentSuccess />} />
+              <Route path="/payment/cancel" element={<PaymentCancel />} />
               <Route path="/admin" element={<AdminPanel />} />
             </Routes>
           </div>
